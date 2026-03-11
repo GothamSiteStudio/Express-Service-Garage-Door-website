@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="top-strip">
       <div class="container">
         <span>Need urgent garage door help? We are ready.</span>
@@ -30,7 +31,7 @@
           </div>
         </a>
         <button class="hamburger" data-nav-toggle aria-expanded="false" aria-label="Open menu">☰</button>
-        <nav class="nav" data-nav>
+        <nav class="nav" data-nav aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services/index.html">Services</a>
@@ -42,7 +43,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="page-hero">
         <div class="container">
           <div class="breadcrumbs">
@@ -192,6 +193,9 @@
         <span class="watermark">Built and marketed by <a href="https://gothamsitestudio.com/" target="_blank" rel="noopener noreferrer">Gotham Site Studio</a></span>
       </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
 
     <script src="assets/js/main.js"></script>
   </body>

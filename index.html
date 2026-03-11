@@ -116,7 +116,8 @@
     </script>
   </head>
   <body>
-    <div class="top-strip">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="top-strip" role="banner">
       <div class="container">
         <span>Serving Southfield + Metro Detroit within a 35-mile radius</span>
         <a href="tel:+12484695753">Emergency line: (248) 469-5753</a>
@@ -135,8 +136,8 @@
 
         <button class="hamburger" data-nav-toggle aria-expanded="false" aria-label="Open menu">☰</button>
 
-        <nav class="nav" data-nav>
-          <a href="index.html">Home</a>
+        <nav class="nav" data-nav aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
           <a href="about.html">About</a>
           <a href="services/index.html">Services</a>
           <a href="service-areas/index.html">Service Areas</a>
@@ -147,7 +148,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="container hero-grid">
           <div class="reveal">
@@ -206,8 +207,8 @@
         </div>
       </section>
 
-      <section class="trust-band">
-        <div class="container">
+      <section class="trust-band" aria-label="Credentials and brands">
+        <div class="marquee-track">
           <span class="pill">Licensed &amp; Insured Team</span>
           <span class="pill">Written Work Scope</span>
           <span class="pill">Final Safety Checklist</span>
@@ -218,6 +219,17 @@
           <span class="pill">Wayne Dalton Expertise</span>
           <span class="pill">Residential + Commercial</span>
           <span class="pill">Transparent Pricing</span>
+          <!-- duplicate set for seamless loop -->
+          <span class="pill" aria-hidden="true">Licensed &amp; Insured Team</span>
+          <span class="pill" aria-hidden="true">Written Work Scope</span>
+          <span class="pill" aria-hidden="true">Final Safety Checklist</span>
+          <span class="pill" aria-hidden="true">Warranty Details in Writing</span>
+          <span class="pill" aria-hidden="true">LiftMaster Compatible</span>
+          <span class="pill" aria-hidden="true">Clopay Installation Ready</span>
+          <span class="pill" aria-hidden="true">Amarr Door Options</span>
+          <span class="pill" aria-hidden="true">Wayne Dalton Expertise</span>
+          <span class="pill" aria-hidden="true">Residential + Commercial</span>
+          <span class="pill" aria-hidden="true">Transparent Pricing</span>
         </div>
       </section>
 
@@ -232,18 +244,22 @@
           </div>
           <div class="proof-grid">
             <article class="proof-card reveal">
+              <div class="proof-icon" aria-hidden="true">🛡️</div>
               <h3>Licensed &amp; Insured Work</h3>
               <p>Coverage and scope details are provided in writing so you know who is working on your home.</p>
             </article>
             <article class="proof-card reveal">
+              <div class="proof-icon" aria-hidden="true">💰</div>
               <h3>Transparent Estimates</h3>
               <p>We explain repair versus replacement options clearly before any paid work begins.</p>
             </article>
             <article class="proof-card reveal">
+              <div class="proof-icon" aria-hidden="true">✅</div>
               <h3>Safety-First Completion</h3>
               <p>Every job ends with testing for door balance, travel limits, and opener safety sensors.</p>
             </article>
             <article class="proof-card reveal">
+              <div class="proof-icon" aria-hidden="true">📍</div>
               <h3>Local Accountability</h3>
               <p>Southfield-based coverage means direct communication and a local team that stands behind the result.</p>
             </article>
@@ -375,19 +391,23 @@
           </div>
           <div class="card-grid">
             <article class="card reveal">
-              <h3>1. Call or Request Service</h3>
+              <div class="step-number">1</div>
+              <h3>Call or Request Service</h3>
               <p>Share the issue, your city, and the urgency level. We schedule quickly.</p>
             </article>
             <article class="card reveal">
-              <h3>2. On-Site Inspection</h3>
+              <div class="step-number">2</div>
+              <h3>On-Site Inspection</h3>
               <p>Technician evaluates springs, tracks, opener, and safety systems.</p>
             </article>
             <article class="card reveal">
-              <h3>3. Clear Options</h3>
+              <div class="step-number">3</div>
+              <h3>Clear Options</h3>
               <p>You receive transparent repair or replacement recommendations.</p>
             </article>
             <article class="card reveal">
-              <h3>4. Professional Completion</h3>
+              <div class="step-number">4</div>
+              <h3>Professional Completion</h3>
               <p>Work is completed, tested, and explained before we leave.</p>
             </article>
           </div>
@@ -405,7 +425,7 @@
               </p>
             </div>
             <div class="card">
-              <p class="review-stars" aria-label="5 out of 5 stars">5/5 rating</p>
+              <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
               <p>
                 "Our spring broke at night and the door would not close. Leading Edge picked up fast, came the
                 same day, and explained everything clearly. Super professional."
@@ -413,7 +433,7 @@
               <p><strong>- Homeowner, Southfield</strong> <span class="review-source">Verified service customer</span></p>
             </div>
             <div class="card" style="margin-top: 0.7rem">
-              <p class="review-stars" aria-label="5 out of 5 stars">5/5 rating</p>
+              <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
               <p>
                 "We upgraded to an insulated door and quiet opener. Installation was clean and on time, and the
                 curb appeal improvement is huge."
@@ -513,15 +533,15 @@
               <form class="form" method="post" action="https://formsubmit.co/your-email@example.com">
                 <label>
                   Full Name
-                  <input type="text" name="name" required />
+                  <input type="text" name="name" required autocomplete="name" />
                 </label>
                 <label>
                   Phone Number
-                  <input type="tel" name="phone" required />
+                  <input type="tel" name="phone" required autocomplete="tel" />
                 </label>
                 <label>
                   Email
-                  <input type="email" name="email" required />
+                  <input type="email" name="email" required autocomplete="email" />
                 </label>
                 <label>
                   Service Needed
@@ -593,6 +613,7 @@
       </div>
     </footer>
 
+    <button class="back-to-top" aria-label="Back to top">↑</button>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
